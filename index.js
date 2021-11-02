@@ -168,8 +168,13 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 */
 
 function game(user, computer){
-  computer = Math.random();
-  return computer;
+  if(user === computer){
+    return "it's a tie";
+  }else if( user < computer){
+    return "you win!";
+  }else if(user > computer){
+    return "you lose!";
+  }else return "How do you keep doing this?"
 }
 
 
