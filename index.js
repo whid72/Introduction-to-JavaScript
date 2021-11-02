@@ -168,7 +168,7 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 */
 
 function game(user, computer){
-  computer = Math.random()*2;
+  computer = Math.random();
   return computer;
 }
 
@@ -185,8 +185,9 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  let miles = kilometers * 0.621371;
+  return miles;
 }
 
 
@@ -199,8 +200,9 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  let feet = cm/30.48;
+  return feet;
 }
 
 
@@ -215,8 +217,11 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(number){
+      for(let i = number;i > 0;i--){
+        let num = number - 1;
+        return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${num} bottles of soda on the wall`
+      }
 }
 
 
@@ -235,8 +240,16 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+if (score >= 90){
+  return 'you got an A';
+} else if (score >= 80 && score < 90){
+  return 'you got a B';
+}else if (score >= 70 && score < 80){
+  return 'you got a C';
+}else if (score >= 60 && score < 70){
+  return 'you got a D';
+}else return 'you got an F';
 }
 
 
