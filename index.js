@@ -171,7 +171,6 @@ function game(user, computer){
   computer = Math.random()*2;
   return computer;
 }
-console.log(computer);
 
 
 
