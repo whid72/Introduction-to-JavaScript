@@ -19,7 +19,13 @@ Do the following:
 
    HINT: no function required
 */
+var votingAge = 18;
 
+if(votingAge >= 18){
+  console.log(true);
+}else{
+  console.log(false)
+}
 
 
 /*
@@ -34,7 +40,13 @@ Do the following:
 */
 
 
+var one = 10;
+var two = 20;
 
+if(two >= one){
+  one++;
+  console.log(one);
+}
 
 
 /*
@@ -49,6 +61,8 @@ Do the following:
 */
 
 
+var str = parseInt("1999");
+console.log(str);
 
 
 /*
@@ -60,8 +74,9 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  let result = a * b;
+  return result;
 }
 
 
@@ -76,8 +91,9 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  age *= 7;
+  return age;
 }
 
 
@@ -109,8 +125,23 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(pounds, age){
+  let numFood = 0;
+  if(age < 1 && age >= 7/12){
+   return numFood = .04 * pounds;
+  }else if(age < 7/12 && age > 4/12){
+   return numFood = .05 * pounds;
+  }else if(age < 4/12 && age > 2/12){
+   return numFood = .10 * pounds;
+  }else if(age >= 1 && pounds <= 5){
+   return numFood = .05 * pounds;
+  }else if(age >= 1 && pounds <= 10 && pounds >= 6){
+   return numFood = .04 * pounds;
+  }else if(age >= 1 && pounds <= 15 && pounds >= 11){
+   return numFood = .03 * pounds;
+  }else if(age >= 1 && pounds > 15){
+   return numFood = .02 * pounds;
+  }
 }
 
 
@@ -137,8 +168,10 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 */
 
 function game(user, computer){
-  /*add your code here*/
+  computer = Math.random()*2;
+  return computer;
 }
+console.log(computer);
 
 
 
